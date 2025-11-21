@@ -1,0 +1,66 @@
+[
+  {
+    "id": "prod_001",
+    "name": "3kg Gas Cylinder",
+    "price": 3500,
+    "category": "cylinder",
+    "in_stock": true,
+    "image_url": "/placeholder.svg"
+  },
+  {
+    "id": "prod_002",
+    "name": "6kg Gas Cylinder",
+    "price": 6500,
+    "category": "cylinder",
+    "in_stock": true,
+    "image_url": "/placeholder.svg"
+  },
+  {
+    "id": "prod_003",
+    "name": "12.5kg Gas Cylinder",
+    "price": 12000,
+    "category": "cylinder",
+    "in_stock": true,
+    "image_url": "/placeholder.svg"
+  },
+  {
+    "id": "prod_004",
+    "name": "25kg Gas Cylinder",
+    "price": 23000,
+    "category": "cylinder",
+    "in_stock": false,
+    "image_url": "/placeholder.svg"
+  },
+  {
+    "id": "prod_005",
+    "name": "Standard Regulator",
+    "price": 1500,
+    "category": "accessory",
+    "in_stock": true,
+    "image_url": "/placeholder.svg"
+  },
+  {
+    "id": "prod_006",
+    "name": "Gas Hose (per meter)",
+    "price": 500,
+    "category": "accessory",
+    "in_stock": true,
+    "image_url": "/placeholder.svg"
+  },
+  {
+    "id": "prod_007",
+    "name": "Hose Clips (pair)",
+    "price": 200,
+    "category": "accessory",
+    "in_stock": true,
+    "image_url": "/placeholder.svg"
+  },
+  {
+    "id": "prod_008",
+    "name": "Gas Cooker Knob",
+    "price": 300,
+    "category": "accessory",
+    "in_stock": true,
+    "image_url": "/placeholder.svg"
+  }
+]
