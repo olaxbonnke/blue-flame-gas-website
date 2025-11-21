@@ -12,33 +12,47 @@ import { ArrowLeft, Minus, Plus, Trash2, Loader2 } from 'lucide-react'
 import Link from "next/link"
 import { useRouter } from 'next/navigation'
 import { useState } from "react"
+import { z } from "zod"
+
+const orderSchema = z.object({
+  name: z.string().min(3, "Please enter your full name."),
+  phone: z.string().min(10, "Enter a valid phone number."),
+  whatsapp: z.string().optional(),
+  address: z.string().min(10, "Delivery address is required."),
+})
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, total, clearCart } = useCart()
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [orderSuccess, setOrderSuccess] = useState(false)
+  const [orderError, setOrderError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
 
     const formData = new FormData(e.currentTarget)
-    const customerData = {
-      name: formData.get("name") as string,
-      phone: formData.get("phone") as string,
-      whatsapp: formData.get("whatsapp") as string,
-      address: formData.get("address") as string,
-    }
-
     try {
+      if (items.length === 0) {
+        setOrderError("Add at least one product to your cart before placing an order.")
+        return
+      }
+
+      const parsed = orderSchema.parse({
+        name: (formData.get("name") as string)?.trim(),
+        phone: (formData.get("phone") as string)?.trim(),
+        whatsapp: (formData.get("whatsapp") as string)?.trim() || undefined,
+        address: (formData.get("address") as string)?.trim(),
+      })
+
       const supabase = createClient()
       
       const { error } = await supabase.from("orders").insert({
-        customer_name: customerData.name,
-        customer_phone: customerData.phone,
-        customer_whatsapp: customerData.whatsapp,
-        customer_address: customerData.address,
+        customer_name: parsed.name,
+        customer_phone: parsed.phone,
+        customer_whatsapp: parsed.whatsapp ?? null,
+        customer_address: parsed.address,
         items: items,
         total_amount: total,
         status: "pending"
@@ -46,11 +60,16 @@ export default function CartPage() {
 
       if (error) throw error
 
+      setOrderError(null)
       setOrderSuccess(true)
       clearCart()
     } catch (error) {
-      console.error("Error placing order:", error)
-      alert("Failed to place order. Please try again.")
+      if (error instanceof z.ZodError) {
+        setOrderError(error.issues[0]?.message ?? "Please check the form and try again.")
+      } else {
+        console.error("Error placing order:", error)
+        setOrderError("Failed to place order. Please try again.")
+      }
     } finally {
       setIsSubmitting(false)
     }
@@ -88,6 +107,12 @@ export default function CartPage() {
           </Button>
           <h1 className="text-3xl font-bold">Your Cart</h1>
         </div>
+
+        {orderError && (
+          <div className="mb-6 rounded-lg border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive">
+            {orderError}
+          </div>
+        )}
 
         {items.length === 0 ? (
           <div className="text-center py-20 border border-dashed border-border rounded-lg">
