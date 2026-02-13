@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "BlueFlame Gas | Reliable Cooking Gas Delivery",
   description: "Fast, safe, and reliable cooking gas delivery service in Nigeria.",
+  viewport: "width=device-width, initial-scale=1",
     generator: 'v0.app'
 }
 
