@@ -44,7 +44,7 @@ export async function SafetyTipsSection() {
           {tips?.map((tip) => {
             const Icon = iconMap[tip.icon_name || 'shield-alert'] || ShieldAlert
             return (
-              <Card key={tip.id} className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-colors">
+              <Card key={tip.id} className="bg-card/50 backdrop-blur-sm border border-muted hover:border-primary/50 transition-colors">
                 <CardHeader className="flex flex-row items-center gap-4 pb-2">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Icon className="h-6 w-6 text-primary" />

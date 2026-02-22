@@ -26,7 +26,7 @@ export async function TestimonialsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials?.map((testimonial) => (
-            <Card key={testimonial.id} className="bg-card/50 border-border/50 relative overflow-hidden">
+            <Card key={testimonial.id} className="bg-card/50 border border-muted relative overflow-hidden">
               <div className="absolute top-4 right-4 text-primary/10">
                 <Quote className="h-24 w-24 rotate-180" />
               </div>

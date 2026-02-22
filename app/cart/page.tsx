@@ -90,7 +90,7 @@ export default function CartPage() {
         </div>
 
         {items.length === 0 ? (
-          <div className="text-center py-20 border border-dashed border-border rounded-lg">
+          <div className="text-center py-20 border border-dashed border-muted rounded-lg">
             <p className="text-muted-foreground mb-4">Your cart is empty</p>
             <Button asChild>
               <Link href="/#products">Start Shopping</Link>
@@ -100,7 +100,7 @@ export default function CartPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6">
               {items.map((item) => (
-                <div key={item.id} className="flex gap-4 p-4 border border-border rounded-lg bg-card/50">
+                <div key={item.id} className="flex gap-4 p-4 border border-muted rounded-lg bg-card/50">
                   <div className="h-20 w-20 bg-muted/30 rounded-md flex items-center justify-center flex-shrink-0">
                     {item.image_url ? (
                       <img src={item.image_url || "/placeholder.svg"} alt={item.name} className="h-full w-full object-contain p-2" />
@@ -144,7 +144,7 @@ export default function CartPage() {
                   </div>
                 </div>
               ))}
-              <div className="flex justify-between items-center p-4 border-t border-border">
+              <div className="flex justify-between items-center p-4 border-t border-muted">
                 <span className="text-lg font-semibold">Total</span>
                 <span className="text-2xl font-bold text-primary">₦{total.toLocaleString()}</span>
               </div>

@@ -30,7 +30,7 @@ export async function LocationsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {locations?.map((location) => (
-            <Card key={location.id} className="overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all">
+            <Card key={location.id} className="overflow-hidden border border-muted bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all">
               <div className="grid md:grid-cols-2 h-full">
                 <div className="p-6 flex flex-col justify-between h-full">
                   <div>
@@ -49,7 +49,7 @@ export async function LocationsSection() {
                       </div>
                     </CardContent>
                   </div>
-                  <div className="mt-6 pt-6 border-t border-border/50">
+                  <div className="mt-6 pt-6 border-t border-muted">
                     <Button className="w-full" variant="outline" asChild>
                       <Link href={location.google_maps_url || "#"} target="_blank">
                         <Navigation className="mr-2 h-4 w-4" /> Get Directions

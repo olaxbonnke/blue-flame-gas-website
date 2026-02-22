@@ -121,7 +121,7 @@ export function PricingManagement({ pricing, cylinders }: { pricing: Pricing | n
         <CardContent>
           <div className="space-y-3">
             {calculatedPrices.map(cylinder => (
-              <div key={cylinder.id} className="flex justify-between items-center p-3 border border-border rounded-lg">
+              <div key={cylinder.id} className="flex justify-between items-center p-3 border border-muted rounded-lg">
                 <div>
                   <p className="font-medium">{cylinder.name}</p>
                   <p className="text-sm text-muted-foreground">{cylinder.cylinder_size_kg}kg</p>

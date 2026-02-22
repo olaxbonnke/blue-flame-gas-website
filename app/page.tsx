@@ -19,7 +19,7 @@ export default function Home() {
       <TestimonialsSection />
       <NewsletterSection />
       
-      <footer id="contact" className="bg-background border-t border-border/40 pt-16 pb-8">
+      <footer id="contact" className="bg-background border-t border-muted pt-16 pb-8">
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div className="space-y-4">
@@ -89,7 +89,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="border-t border-border/40 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="border-t border-muted pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-center text-sm text-muted-foreground md:text-left">
               © 2025 BlueFlame Gas. All rights reserved.
             </p>

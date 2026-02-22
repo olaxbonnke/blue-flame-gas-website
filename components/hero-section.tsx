@@ -53,10 +53,10 @@ export function HeroSection() {
             </div>
           </div>
           <div className="mx-auto lg:ml-auto flex items-center justify-center">
-            <div className="relative h-[350px] w-[350px] sm:h-[450px] sm:w-[450px] lg:h-[500px] lg:w-[500px]">
+              <div className="relative h-[350px] w-[350px] sm:h-[450px] sm:w-[450px] lg:h-[500px] lg:w-[500px]">
               {/* Abstract representation of a gas cylinder/flame since we don't have an image yet */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/30 to-blue-600/30 blur-3xl animate-pulse"></div>
-              <div className="relative h-full w-full rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-6 shadow-2xl flex flex-col items-center justify-center overflow-hidden">
+              <div className="relative h-full w-full rounded-2xl border border-muted bg-card/50 backdrop-blur-sm p-6 shadow-2xl flex flex-col items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80 z-10"></div>
                 <div className="z-20 text-center space-y-6">
                   <div className="relative mx-auto h-32 w-32 rounded-full bg-primary/20 flex items-center justify-center">
@@ -69,11 +69,11 @@ export function HeroSection() {
                     <p className="text-sm text-muted-foreground">Updated today</p>
                   </div>
                   <div className="grid grid-cols-2 gap-4 w-full max-w-xs mx-auto pt-4">
-                    <div className="rounded-lg bg-background/50 p-3 border border-border/50">
+                    <div className="rounded-lg bg-background/50 p-3 border border-muted">
                       <div className="text-xs text-muted-foreground">12.5kg</div>
                       <div className="font-bold">₦12,500</div>
                     </div>
-                    <div className="rounded-lg bg-background/50 p-3 border border-border/50">
+                    <div className="rounded-lg bg-background/50 p-3 border border-muted">
                       <div className="text-xs text-muted-foreground">6kg</div>
                       <div className="font-bold">₦6,000</div>
                     </div>
