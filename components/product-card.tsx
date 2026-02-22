@@ -31,7 +31,7 @@ export function ProductCard({ product }: { product: Product }) {
   }
 
   return (
-    <Card className="overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+    <Card className="overflow-hidden bg-card/50 backdrop-blur-sm transition-all border border-muted hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
       <div className="aspect-square relative bg-muted/20 flex items-center justify-center p-6">
         {product.image_url ? (
           <Image
