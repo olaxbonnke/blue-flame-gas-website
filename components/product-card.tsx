@@ -62,7 +62,7 @@ export function ProductCard({ product }: { product: Product }) {
         </p>
         <div className="flex items-baseline gap-1">
           <span className="text-2xl font-bold text-primary">
-            ₦{product.price.toLocaleString()}
+            ₦{product.price ? product.price.toLocaleString() : "Contact for price"}
           </span>
           {product.cylinder_size_kg && (
             <span className="text-sm text-muted-foreground">
