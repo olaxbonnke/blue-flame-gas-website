@@ -10,19 +10,19 @@ export function SiteHeader() {
   const { itemCount } = useCart()
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-muted bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-700 bg-slate-900/95 backdrop-blur supports-[backdrop-filter]:bg-slate-900/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-primary/20">
-              <Flame className="h-5 w-5 text-primary animate-pulse" />
+            <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/20">
+              <Flame className="h-5 w-5 text-blue-400 animate-pulse" />
             </div>
-            <span className="text-xl font-bold tracking-tight text-foreground">BlueFlame Gas</span>
+            <span className="text-xl font-bold tracking-tight text-slate-50">BlueFlame Gas</span>
           </Link>
         </div>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          <Link href="/" className="text-foreground/80 hover:text-primary transition-colors">
+          <Link href="/" className="text-slate-300 hover:text-blue-400 transition-colors">
             Home
           </Link>
           <Link href="/#products" className="text-foreground/80 hover:text-primary transition-colors">
@@ -45,7 +45,7 @@ export function SiteHeader() {
               <ShoppingCart className="h-5 w-5" />
               <span className="sr-only">Cart</span>
               {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
+                <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-blue-500 text-[10px] font-bold text-slate-900">
                   {itemCount}
                 </span>
               )}
@@ -66,7 +66,7 @@ export function SiteHeader() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-4 mt-8">
-                <Link href="/" className="text-lg font-medium hover:text-primary">
+                <Link href="/" className="text-lg font-medium hover:text-blue-400">
                   Home
                 </Link>
                 <Link href="/#products" className="text-lg font-medium hover:text-primary">
