@@ -57,11 +57,11 @@ export function NewsletterSection() {
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
                 <div className="relative flex-1">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
                   <Input 
                     type="email" 
                     placeholder="Enter your email address" 
-                    className="pl-10 h-12 bg-background"
+                    className="pl-10 h-12 bg-slate-800 text-white border-slate-600"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required

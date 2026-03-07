@@ -35,11 +35,11 @@ export async function TestimonialsSection() {
                   {[...Array(5)].map((_, i) => (
                     <Star 
                       key={i} 
-                      className={`h-4 w-4 ${i < (testimonial.rating || 5) ? "text-yellow-500 fill-yellow-500" : "text-muted-foreground"}`} 
+                      className={`h-4 w-4 ${i < (testimonial.rating || 5) ? "text-yellow-500 fill-yellow-500" : "text-slate-400"}`} 
                     />
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-6 italic">
+                <p className="text-slate-400 mb-6 italic">
                   "{testimonial.comment}"
                 </p>
                 <div className="flex items-center gap-4">
@@ -48,8 +48,8 @@ export async function TestimonialsSection() {
                     <AvatarFallback>{testimonial.customer_name.substring(0, 2).toUpperCase()}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <p className="font-semibold">{testimonial.customer_name}</p>
-                    <p className="text-xs text-muted-foreground">{testimonial.customer_location}</p>
+                    <p className="font-semibold text-white">{testimonial.customer_name}</p>
+                    <p className="text-xs text-slate-400">{testimonial.customer_location}</p>
                   </div>
                 </div>
               </CardContent>

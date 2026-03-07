@@ -72,16 +72,16 @@ export function SiteHeader() {
                 <Link href="/" className="text-lg font-medium hover:text-blue-400">
                   Home
                 </Link>
-                <Link href="/#products" className="text-lg font-medium hover:text-primary">
+                <Link href="/#products" className="text-lg font-medium hover:text-blue-400">
                   Order Gas
                 </Link>
-                <Link href="/#safety" className="text-lg font-medium hover:text-primary">
+                <Link href="/#safety" className="text-lg font-medium hover:text-blue-400">
                   Safety Tips
                 </Link>
-                <Link href="/#locations" className="text-lg font-medium hover:text-primary">
+                <Link href="/#locations" className="text-lg font-medium hover:text-blue-400">
                   Locations
                 </Link>
-                <Link href="/#contact" className="text-lg font-medium hover:text-primary">
+                <Link href="/#contact" className="text-lg font-medium hover:text-blue-400">
                   Contact
                 </Link>
                 <Button className="mt-4 w-full" asChild>

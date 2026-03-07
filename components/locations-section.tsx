@@ -30,26 +30,26 @@ export async function LocationsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {locations?.map((location) => (
-            <Card key={location.id} className="overflow-hidden border border-muted bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all">
+            <Card key={location.id} className="overflow-hidden border border-slate-700 bg-slate-800 backdrop-blur-sm hover:border-blue-500 transition-all">
               <div className="grid md:grid-cols-2 h-full">
                 <div className="p-6 flex flex-col justify-between h-full">
                   <div>
                     <CardHeader className="p-0 mb-4">
-                      <CardTitle className="text-xl">{location.name}</CardTitle>
-                      <p className="text-sm text-primary font-medium">{location.city}, {location.state}</p>
+                      <CardTitle className="text-xl text-white">{location.name}</CardTitle>
+                      <p className="text-sm text-blue-400 font-medium">{location.city}, {location.state}</p>
                     </CardHeader>
                     <CardContent className="p-0 space-y-4">
-                      <div className="flex items-start gap-3 text-muted-foreground">
-                        <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-3 text-slate-400">
+                        <MapPin className="h-5 w-5 text-blue-400 shrink-0 mt-0.5" />
                         <span>{location.address}</span>
                       </div>
-                      <div className="flex items-center gap-3 text-muted-foreground">
-                        <Phone className="h-5 w-5 text-primary shrink-0" />
+                      <div className="flex items-center gap-3 text-slate-400">
+                        <Phone className="h-5 w-5 text-blue-400 shrink-0" />
                         <span>{location.phone}</span>
                       </div>
                     </CardContent>
                   </div>
-                  <div className="mt-6 pt-6 border-t border-muted">
+                  <div className="mt-6 pt-6 border-t border-slate-700">
                     <Button className="w-full" variant="outline" asChild>
                       <Link href={location.google_maps_url || "#"} target="_blank">
                         <Navigation className="mr-2 h-4 w-4" /> Get Directions
@@ -57,10 +57,10 @@ export async function LocationsSection() {
                     </Button>
                   </div>
                 </div>
-                <div className="bg-muted/50 min-h-[200px] relative">
+                <div className="bg-slate-700/50 min-h-[200px] relative">
                   {/* Placeholder for map - in a real app this would be a Google Maps embed */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-muted">
-                    <MapPin className="h-12 w-12 text-muted-foreground/50" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-slate-700">
+                    <MapPin className="h-12 w-12 text-slate-400/50" />
                     <span className="sr-only">Map placeholder</span>
                   </div>
                   <iframe 
