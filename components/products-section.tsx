@@ -30,8 +30,8 @@ export async function ProductsSection() {
 
         <div className="space-y-12">
           <div>
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <span className="h-8 w-1 bg-primary rounded-full"></span>
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2 text-white">
+              <span className="h-8 w-1 bg-blue-500 rounded-full"></span>
               Gas Refills
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -42,8 +42,8 @@ export async function ProductsSection() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <span className="h-8 w-1 bg-primary rounded-full"></span>
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2 text-white">
+              <span className="h-8 w-1 bg-blue-500 rounded-full"></span>
               Accessories
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
