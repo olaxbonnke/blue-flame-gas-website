@@ -5,10 +5,18 @@ import { ArrowRight, Flame, ShieldCheck, Truck } from 'lucide-react'
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
-      {/* Background elements */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-slate-900 to-slate-900"></div>
-      <div className="absolute top-0 right-0 -z-10 h-[500px] w-[500px] rounded-full bg-primary/10 blur-[100px] opacity-50"></div>
-      <div className="absolute bottom-0 left-0 -z-10 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[100px] opacity-30"></div>
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        className="absolute inset-0 w-full h-full object-cover -z-20"
+      >
+        <source src="/hero-background.mp4" type="video/mp4" />
+      </video>
+      {/* Overlay */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/90"></div>
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-slate-900"></div>
 
       <div className="container px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">

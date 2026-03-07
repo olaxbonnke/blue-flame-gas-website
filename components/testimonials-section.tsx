@@ -13,20 +13,20 @@ export async function TestimonialsSection() {
     .limit(3)
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-slate-900 border-t border-slate-700">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
             What Our Customers Say
           </h2>
-          <p className="max-w-[700px] text-muted-foreground md:text-xl">
+          <p className="max-w-[700px] text-slate-400 md:text-xl">
             Don't just take our word for it. Here's what our satisfied customers have to say about our service.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials?.map((testimonial) => (
-            <Card key={testimonial.id} className="bg-card/50 border border-muted relative overflow-hidden">
+            <Card key={testimonial.id} className="bg-slate-800 border-slate-700 relative overflow-hidden">
               <div className="absolute top-4 right-4 text-primary/10">
                 <Quote className="h-24 w-24 rotate-180" />
               </div>

@@ -37,16 +37,15 @@ export function NewsletterSection() {
   }
 
   return (
-    <section className="py-20 bg-primary/5 border-y border-primary/10">
+    <section className="py-20 bg-gradient-to-r from-blue-500/10 to-blue-500/5 border-y border-slate-700">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="space-y-4 max-w-xl text-center lg:text-left">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Stay Updated with BlueFlame
-            </h2>
-            <p className="text-muted-foreground md:text-lg">
-              Subscribe to our newsletter for safety tips, special offers, and updates on gas prices.
-            </p>
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+            Stay Updated
+          </h2>
+          <p className="max-w-[600px] text-slate-400 md:text-lg">
+            Subscribe to our newsletter for the latest gas pricing, safety tips, and promotions.
+          </p>
           </div>
           
           <div className="w-full max-w-md">

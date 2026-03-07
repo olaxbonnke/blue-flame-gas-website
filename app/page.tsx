@@ -52,21 +52,20 @@ export default function Home() {
               <h3 className="font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-sm text-slate-400">
                 <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
+                <li><Link href="/services" className="hover:text-blue-400 transition-colors">Services</Link></li>
                 <li><Link href="#products" className="hover:text-blue-400 transition-colors">Order Gas</Link></li>
                 <li><Link href="#safety" className="hover:text-blue-400 transition-colors">Safety Tips</Link></li>
                 <li><Link href="#locations" className="hover:text-blue-400 transition-colors">Locations</Link></li>
-                <li><Link href="/admin" className="hover:text-blue-400 transition-colors">Admin Login</Link></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-semibold mb-4">Services</h3>
+              <h3 className="font-semibold mb-4">Admin Panel</h3>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li>Home Delivery</li>
-                <li>Industrial Supply</li>
-                <li>Gas Accessories</li>
-                <li>Cylinder Maintenance</li>
-                <li>Safety Consulting</li>
+                <li><Link href="/admin/pricing-dual" className="hover:text-blue-400 transition-colors">Gas Pricing</Link></li>
+                <li><Link href="/admin/manage-products" className="hover:text-blue-400 transition-colors">Products & Services</Link></li>
+                <li><Link href="/admin/newsletter" className="hover:text-blue-400 transition-colors">Newsletter</Link></li>
+                <li><Link href="/admin" className="hover:text-blue-400 transition-colors">Admin Dashboard</Link></li>
               </ul>
             </div>
             

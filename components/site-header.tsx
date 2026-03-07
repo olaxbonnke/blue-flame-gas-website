@@ -25,16 +25,19 @@ export function SiteHeader() {
           <Link href="/" className="text-slate-300 hover:text-blue-400 transition-colors">
             Home
           </Link>
-          <Link href="/#products" className="text-foreground/80 hover:text-primary transition-colors">
+          <Link href="/services" className="text-slate-300 hover:text-blue-400 transition-colors">
+            Services
+          </Link>
+          <Link href="/#products" className="text-slate-300 hover:text-blue-400 transition-colors">
             Order Gas
           </Link>
-          <Link href="/#safety" className="text-foreground/80 hover:text-primary transition-colors">
+          <Link href="/#safety" className="text-slate-300 hover:text-blue-400 transition-colors">
             Safety Tips
           </Link>
-          <Link href="/#locations" className="text-foreground/80 hover:text-primary transition-colors">
+          <Link href="/#locations" className="text-slate-300 hover:text-blue-400 transition-colors">
             Locations
           </Link>
-          <Link href="/#contact" className="text-foreground/80 hover:text-primary transition-colors">
+          <Link href="/#contact" className="text-slate-300 hover:text-blue-400 transition-colors">
             Contact
           </Link>
         </nav>

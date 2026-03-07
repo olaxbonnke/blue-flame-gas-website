@@ -31,8 +31,8 @@ export function ProductCard({ product }: { product: Product }) {
   }
 
   return (
-    <Card className="overflow-hidden bg-card/50 backdrop-blur-sm transition-all border border-muted hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
-      <div className="aspect-square relative bg-muted/20 flex items-center justify-center p-6">
+    <Card className="overflow-hidden bg-slate-800 backdrop-blur-sm transition-all border border-slate-700 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/10">
+      <div className="aspect-square relative bg-slate-700/20 flex items-center justify-center p-6">
         {product.image_url ? (
           <Image
             src={product.image_url || "/placeholder.svg"}
@@ -41,31 +41,31 @@ export function ProductCard({ product }: { product: Product }) {
             className="object-contain"
           />
         ) : (
-          <div className="relative h-32 w-32 rounded-full bg-primary/10 flex items-center justify-center">
-            <Flame className="h-16 w-16 text-primary/50" />
+          <div className="relative h-32 w-32 rounded-full bg-blue-500/10 flex items-center justify-center">
+            <Flame className="h-16 w-16 text-blue-400/50" />
           </div>
         )}
         {!product.in_stock && (
-          <div className="absolute inset-0 bg-background/80 flex items-center justify-center">
-            <span className="bg-destructive text-destructive-foreground px-3 py-1 rounded-full text-sm font-bold">
+          <div className="absolute inset-0 bg-slate-900/80 flex items-center justify-center">
+            <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">
               Out of Stock
             </span>
           </div>
         )}
       </div>
       <CardHeader>
-        <CardTitle className="line-clamp-1">{product.name}</CardTitle>
+        <CardTitle className="line-clamp-1 text-white">{product.name}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-sm text-muted-foreground line-clamp-2 h-10 mb-4">
+        <p className="text-sm text-slate-400 line-clamp-2 h-10 mb-4">
           {product.description || "High quality gas product for your home."}
         </p>
         <div className="flex items-baseline gap-1">
-          <span className="text-2xl font-bold text-primary">
+          <span className="text-2xl font-bold text-blue-400">
             ₦{product.price ? product.price.toLocaleString() : "Contact for price"}
           </span>
           {product.cylinder_size_kg && (
-            <span className="text-sm text-muted-foreground">
+            <span className="text-sm text-slate-400">
               / {product.cylinder_size_kg}kg
             </span>
           )}

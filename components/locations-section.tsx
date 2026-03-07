@@ -14,16 +14,16 @@ export async function LocationsSection() {
     .order("created_at", { ascending: true })
 
   return (
-    <section id="locations" className="py-20 bg-muted/30">
+    <section id="locations" className="py-20 bg-slate-800/50 border-t border-slate-700">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+          <div className="inline-flex items-center rounded-full border border-blue-500/30 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-400">
             <MapPin className="mr-2 h-4 w-4" /> Find Us
           </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
             Our Stations
           </h2>
-          <p className="max-w-[700px] text-muted-foreground md:text-xl">
+          <p className="max-w-[700px] text-slate-400 md:text-xl">
             Visit any of our stations for quick refills or pickup. We are strategically located to serve you better.
           </p>
         </div>
