@@ -24,8 +24,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div className="space-y-4">
               <Link href="/" className="flex items-center gap-2">
-                <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-primary/20">
-                  <Flame className="h-5 w-5 text-primary" />
+                <div className="relative flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/20">
+                  <Flame className="h-5 w-5 text-blue-400" />
                 </div>
                 <span className="text-xl font-bold tracking-tight text-slate-50">BlueFlame Gas</span>
               </Link>
